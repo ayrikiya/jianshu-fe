@@ -8,7 +8,6 @@ axios.interceptors.response.use((response) => {
         var response = {};
         console.log('处理error')
         switch(err.response.config.url){
-            default:
             case '/api/detail.json':
                 response.data = detail_json;
                 break;
@@ -23,7 +22,10 @@ axios.interceptors.response.use((response) => {
                 break;
             case '/api/login.json':
                 response.data = login_json;
-            
+                break;
+            default:
+                response.data = homeMoreList_json;
+                console.log('dadada');
         }
         return Promise.resolve(response);
     }
@@ -68,10 +70,10 @@ var home_json = {
             {"id":8,"title":"扎克伯格的女人真是不简单！没有好看的皮囊，却成功地嫁进豪门。她是怎么做到的？","desc":"01 普莉希拉·陈，长相真得很普通，不信你看： 她不但长相普通，而且身材平庸，虎背熊腰、粗胳膊粗腿，俨然一个女汉子： 这样的形象，完全颠覆了我们...","imgUrl":"https://upload-images.jianshu.io/upload_images/12831381-5328b1f5ad7d53d3?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"}
 	    ],
 	    "bandList": [
-            {"id":1,"imgUrl":"https://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"},
-            {"id":2,"imgUrl":"https://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"},
-            {"id":3,"imgUrl":"https://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"},
-            {"id":4,"imgUrl":"https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"}
+            {"id":1,"imgUrl":"/bandList/1.png"},
+            {"id":2,"imgUrl":"/bandList/2.png"},
+            {"id":3,"imgUrl":"/bandList/3.png"},
+            {"id":4,"imgUrl":"/bandList/4.png"}
 	    ]
 	}
 };

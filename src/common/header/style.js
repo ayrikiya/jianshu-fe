@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logoPic from '../../statics/logo.png';
 
+console.log(logoPic)
 
 export const HeaderWrapper = styled.div`
 	z-index: 1;

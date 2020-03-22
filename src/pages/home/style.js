@@ -130,7 +130,7 @@ export const LoadMore = styled.div`
 export const BackTop = styled.div`
 	position: fixed;
 	right: 100px;
-	bottom: 100px;
+	bottom: 80px;
 	width: 60px;
 	height: 60px;
 	line-height: 60px;
